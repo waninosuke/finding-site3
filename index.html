@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイト・テキストビューアー</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f7; color: #333; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .controls { display: flex; gap: 10px; margin-bottom: 20px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        input[type="url"] { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; }
+        button { padding: 10px 20px; background-color: #0071e3; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #0077ed; }
+        #viewer-container { background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 400px; padding: 20px; }
+        .loading { text-align: center; color: #666; font-size: 18px; padding: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>サイト情報ビューアー</h1>
+        <div class="controls">
+            <input type="url" id="target-url" placeholder="https://example.com" value="https://example.com">
+            <button id="load-btn">読み込む</button>
+        </div>
+        <div id="viewer-container">
+            <p style="color: #999; text-align: center; padding: 40px;">URLを入力して「読み込む」を押してください。</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
